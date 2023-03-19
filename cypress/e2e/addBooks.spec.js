@@ -24,6 +24,7 @@ const firstBook = {
       cy.visit("/");
       cy.login("test@test.com", "test");
     });
+    
   
      //добавляем первую книгу
     it("Should add first book", () => {
@@ -62,6 +63,7 @@ const firstBook = {
       cy.contains(thirdBook.title).should("not.exist");
     });
     
+    //удаляем книгу из избранного
     it("Should delete book from favorite", () => {
         cy.visit("/favorites");
         cy.contains(secondBook.title)
@@ -70,3 +72,9 @@ const firstBook = {
         cy.contains(secondBook.title).should("not.exist");
       });
   });
+
+ 
+  
+      
+   
+  

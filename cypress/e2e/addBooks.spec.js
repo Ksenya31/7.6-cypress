@@ -24,8 +24,7 @@ const firstBook = {
       cy.visit("/");
       cy.login("test@test.com", "test");
     });
-    
-  
+      
      //добавляем первую книгу
     it("Should add first book", () => {
       cy.addBook(firstBook);

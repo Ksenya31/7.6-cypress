@@ -1,7 +1,7 @@
 /node_modules/
 /public/
 /src/
-.evn
+.env
 .eslint
 server.js
 yarn.lock

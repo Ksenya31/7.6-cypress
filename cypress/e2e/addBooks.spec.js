@@ -25,6 +25,11 @@ const firstBook = {
       cy.login("test@test.com", "test");
     });
       
+     //проверка загрузки главной страницы
+    it("Should successfully login", () => {
+            cy.contains("Добро пожаловать test@test.com").should("be.visible");
+    });
+        
      //добавляем первую книгу
     it("Should add first book", () => {
       cy.addBook(firstBook);
@@ -70,8 +75,7 @@ const firstBook = {
           .within(() => cy.get(".card-footer > .btn").click({ force: true }));
         cy.contains(secondBook.title).should("not.exist");
       });
-  });
-
+    });
  
   
       
